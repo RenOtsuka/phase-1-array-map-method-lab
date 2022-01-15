@@ -12,5 +12,22 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  const newTutorial = tutorials.map(function(elem){
+    
+    let firstSentence = elem.split(" ");
+    //console.log(sentence);
+
+    for(let i = 0; i < firstSentence.length; i++){
+      firstSentence[i] = firstSentence[i][0].toUpperCase() + firstSentence[i].substring(1);
+      //console.log(sentence);
+    }
+
+   let secondSentence = firstSentence.join(" ");
+    //console.log(sentence);
+    
+    return secondSentence;
+  }
+  );
+  //console.log(newTutorial);
+  return newTutorial;
 }
